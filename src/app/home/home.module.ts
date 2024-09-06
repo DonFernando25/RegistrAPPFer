@@ -24,7 +24,5 @@ export class HomePageModule {
   constructor(private navCtrl: NavController) {}
 
 
-  navigateToLogin() {
-    this.navCtrl.navigateForward('/login');
-  }
+  
 }

@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'restablecer',
     loadChildren: () => import('./restablecer/restablecer.module').then(m => m.RestablecerPageModule)
+  },  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
+
 ];
 
 @NgModule({
