@@ -25,5 +25,9 @@ export class InicioPage  {
     this.navCtrl.back();
   }
   
+  goToPage(page: string) {
+    this.router.navigate([`/${page}`]); 
+  }
+
 }
 
