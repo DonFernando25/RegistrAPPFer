@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'camara',
     loadChildren: () => import('./camara/camara.module').then( m => m.CamaraPageModule)
+  },  {
+    path: 'qr-escaner',
+    loadChildren: () => import('./qr-escaner/qr-escaner.module').then( m => m.QrEscanerPageModule)
   },
+
 
 ];
 
