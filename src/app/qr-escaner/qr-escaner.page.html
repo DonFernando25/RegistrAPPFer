@@ -5,8 +5,21 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-button expand="full" (click)="startScanner()">Escanear Código QR</ion-button>
-  <div *ngIf="qrCode">
-    <p>Contenido del QR: {{ qrCode }}</p>
-  </div>
+  <!-- Componente de escaneo -->
+  <zxing-scanner
+    [start]="true"
+    [device]="null"
+    (scanSuccess)="onCodeResult($event)"
+  ></zxing-scanner>
+
+  <!-- Mostrar resultado del código escaneado -->
+  <ion-card *ngIf="qrCodeResult">
+    <ion-card-header>
+      <ion-card-title>Resultado del QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ qrCodeResult }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
